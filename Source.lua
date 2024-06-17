@@ -44,12 +44,7 @@ local images = {
 library.gradient1 = images.gradient1
 library.screengui = Instance.new('ScreenGui')
 
-library.screengui.Parent = game:GetService('CoreGui')
-for i,v in pairs(images) do
-    if not isfile(library.folder..'/Assets/'..i..'.ln') then
-        writefile(library.folder..'/Assets/'..i..'.ln', syn.crypt.custom.encrypt('aes-ctr',game:HttpGet(v),'4XGudgFuutoHUM2Ctwsq4YrQ','zP5JJWPSIbf5Xuuy'))
-    end
-    images[i] = syn.crypt.custom.decrypt('aes-ctr',readfile(library.folder..'/Assets/'..i..'.ln'),'4XGudgFuutoHUM2Ctwsq4YrQ','zP5JJWPSIbf5Xuuy')
+
 end
 local utility = {}
 local totalunnamedflags = 0
