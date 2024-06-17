@@ -43,7 +43,7 @@ local images = {
 }
 library.gradient1 = images.gradient1
 library.screengui = Instance.new('ScreenGui')
-syn.protect_gui(library.screengui)
+
 library.screengui.Parent = game:GetService('CoreGui')
 for i,v in pairs(images) do
     if not isfile(library.folder..'/Assets/'..i..'.ln') then
